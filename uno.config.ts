@@ -15,7 +15,7 @@ export default defineConfig({
           dark: "media"
         }),
         presetWebFonts({
-          provider: 'google', // default provider
+          provider: 'bunny', // default provider
           fonts: {
             // these will extend the default theme
             sans: ['Outfit'],
