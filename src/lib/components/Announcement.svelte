@@ -2,7 +2,6 @@
 	import dayjs from "dayjs";
 
 	export let data: any;
-	console.log(data);
 </script>
 
 {#if data}

@@ -8,7 +8,6 @@
     import "$lib/styles/blogpost.css";
 
     export let data: PageData;
-    console.log(data.post.data);
 </script>
 
 <svelte:head>

@@ -4,8 +4,6 @@
     export let data: PageData;
 
     import SvelteSeo from "svelte-seo";
-
-    console.log(data.posts.data);
 </script>
 
 
