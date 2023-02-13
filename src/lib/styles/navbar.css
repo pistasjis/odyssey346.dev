@@ -1,0 +1,25 @@
+nav {
+    @apply sticky top-0;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        position: static;
+        top: 0;
+    }
+    .navlinks {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .navlinks a {
+        @apply w-2/3 max-w-screen text-center;
+    }
+    .odyssey {
+        padding-bottom: 0.5rem;
+    }
+
+    .odyssey > h1 > span {
+        text-align: center;
+    }
+}

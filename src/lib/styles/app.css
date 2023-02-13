@@ -1,0 +1,21 @@
+:root {
+    --background: #0c0c17;
+    --second-background: #1f1f3d;
+    --third-background: #333363;
+    --accent: #05d2c1;
+    color-scheme: dark;
+}
+
+body {
+    @apply bg-background text-gray-100 font-sans;
+}
+
+.container {
+	@apply mx-auto mt-5 max-w-3xl px-8 mb-5;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        @apply mb-5 mt-1;
+    }
+}
