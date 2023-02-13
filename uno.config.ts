@@ -18,7 +18,7 @@ export default defineConfig({
           provider: 'bunny', // default provider
           fonts: {
             // these will extend the default theme
-            sans: ['Outfit'],
+            sans: ["Outfit", "sans-serif"],
           },
         }),
         presetIcons({
