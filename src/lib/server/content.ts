@@ -1,9 +1,12 @@
 import { env } from '$env/dynamic/private';
+import { building } from "$app/environment";
 
-if (!env.directus_api_url) {
-    throw new Error('Missing env.directus_api_url');
-} else if (!env.directus_token) {
-    throw new Error('Missing env.directus_token');
+if (!building) {
+    if (!env.directus_api_url) {
+        throw new Error('Missing env.directus_api_url');
+    } else if (!env.directus_token) {
+        throw new Error('Missing env.directus_token');
+    }
 }
 
 export async function getPosts() {
