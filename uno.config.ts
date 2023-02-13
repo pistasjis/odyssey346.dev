@@ -43,7 +43,7 @@ export default defineConfig({
             thirdbackground: 'var(--third-background)',
         },
         fontFamily: {
-          sans: ["Nunito", "sans-serif"],
+          sans: ["Outfit", "sans-serif"],
         },
     }
 })
