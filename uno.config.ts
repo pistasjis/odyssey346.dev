@@ -35,10 +35,7 @@ export default defineConfig({
             'pre': {
               'background': 'var(--second-background) !important',
               'font-family': 'var(--font-mono) !important',
-            },
-            'p': {
-              'margin-top': '0',
-              'margin-bottom': '0',
+              'white-space': 'pre-wrap !important',
             },
             'a': {
               'text-underline-offset': '5px',
@@ -52,6 +49,7 @@ export default defineConfig({
               'padding': '0.25rem 0.5rem',
               'border-radius': '0.25rem',
               'font-weight': '500',
+              'white-space': 'pre-wrap !important',
             },
             'code::before': {
               'display': 'none',

@@ -28,7 +28,7 @@
     }}
 />
 
-<div class="flex flex-col justify-center items-center container p-5 border-2 rounded-2xl">
+<div class="flex flex-col justify-center items-center container p-5 border-2 rounded-2xl project">
     <div class="flex flex-col items-center">
         <div class="pb-2 flex flex-col items-center gap-4">
         <h1 class="text-4xl font-bold">{data.project.data[0].name}</h1>
@@ -45,3 +45,11 @@
         </div>
     </div>
 </div>
+
+<style>
+    @media screen and (max-width: 768px) {
+        .project {
+            width: 90%;
+        }
+    }
+</style>
