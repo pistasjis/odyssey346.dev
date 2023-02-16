@@ -3,6 +3,7 @@
     --second-background: #1f1f3d;
     --third-background: #333363;
     --accent: #05d2c1;
+    --font-mono: 'JetBrains Mono', monospace;
     color-scheme: dark;
 }
 
@@ -12,6 +13,11 @@ body {
 
 .container {
 	@apply mx-auto mt-5 max-w-3xl px-8 mb-5;
+}
+
+/* for code blocks in blog */
+.prose code {
+    @apply not-prose;
 }
 
 @media screen and (max-width: 768px) {
