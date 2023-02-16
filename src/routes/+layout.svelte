@@ -13,9 +13,10 @@
     let YValue = 0;
 </script>
 
-<noscript>
+<!-- <noscript>
     <Noscript />
-</noscript>
+</noscript> -->
+
 <Nav>
     {#if $navigating}
 		<LoadProgress />
