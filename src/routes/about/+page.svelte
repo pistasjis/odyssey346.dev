@@ -6,10 +6,6 @@
     import type { PageData } from "./$types";
 
     import SvelteSeo from "svelte-seo";
-
-    import dayjs from "dayjs";
-
-    export let data: PageData;
 </script>
 
 <svelte:head>
@@ -38,8 +34,6 @@
         <p>You can also put in odyssey346.dev in your Monero client if it supports OpenAlias.</p>
         <img src="/ha4t207b.bmp" alt="Monero donation QR code" class="w-1/2 rounded-xl" />
         <p class="text-xl">Thank you for your support!</p>
-        <h2 class="text-2xl" id="Info">Info</h2>
-        <p>This version of the website was built on <b>{dayjs (data.version.name).format("dddd, DD MMM YYYY h:mm A")}</b>.</p>
         <ReadMoreButton href="/" text="Want to go back home?" />
     </div>
 </div>
