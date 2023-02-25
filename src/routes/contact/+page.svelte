@@ -61,6 +61,6 @@
                 >Submit</button
             >
         </form>
-        <p class="break-all">If the form (for some reason) doesn't work, please shoot me an e-mail at <Link text="hi@odyssey346.dev" href="mailto:hi@odyssey346.dev" />.</p>
+        <p class="break-all">If the form (for some reason) doesn't work, please shoot me an e-mail at <Link text="hi[at]odyssey346.dev" href="mailto:hi@odyssey346.dev" />.</p>
     </div>
 </div>
