@@ -33,4 +33,5 @@ jobs:
           tags: ghcr.io/odyssey346/website:latest
           context: "."
           push: true
+          platform: linux/amd64,linux/arm64
           no-cache: true
