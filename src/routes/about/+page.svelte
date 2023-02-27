@@ -30,7 +30,7 @@
     <div class="flex flex-col items-left gap-4 mt-5 max-w-xl">
         <h2 class="text-2xl" id="donate">Donate</h2>
         <p>You can donate Monero to me if you want.</p>
-        <p>My Monero address is: <code class="break-all bg-thirdbackground">45wYu3oEAhu7s9aodftL2iBztYCdKzTZ4gaTRXGRRsN8cfVbdDMrVCEDmUczBiosE3ESVtyRKodXKgcTThyNsF2XGJvee5V</code></p>
+        <p>My Monero address is: <code class="break-all bg-thirdbackground p-0.5 rounded-md">45wYu3oEAhu7s9aodftL2iBztYCdKzTZ4gaTRXGRRsN8cfVbdDMrVCEDmUczBiosE3ESVtyRKodXKgcTThyNsF2XGJvee5V</code></p>
         <p>You can also put in odyssey346.dev in your Monero client if it supports OpenAlias.</p>
         <img src="/ha4t207b.bmp" alt="Monero donation QR code" class="w-1/2 rounded-xl" />
         <p class="text-xl">Thank you for your support!</p>
