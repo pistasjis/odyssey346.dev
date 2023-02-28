@@ -8,7 +8,7 @@
     let innerWidth = 0;
 </script>
 
-<nav class="flex justify-between border-solid p-2 border-gray-600 bg-background navbar">
+<nav class="flex justify-between border-solid p-2 border-gray-600 bg-background navbar z-50">
     <slot /> <!-- slot for nav progress -->
     <div class="flex flex-row items-center justify-center">
         <a href="/" class="odyssey">
