@@ -6,6 +6,7 @@
     import "$lib/styles/blogpost.css";
 
     import SvelteSeo from "svelte-seo";
+	import InfoBanner from "$lib/components/InfoBanner.svelte";
 
     export let data: PageData;
 </script>
@@ -28,14 +29,31 @@
     }}
 />
 
+<div class="flex flec-col justify-center items-center container">
+{#if data.project.data[0].status == "draft"}
+    <InfoBanner title="This project page is a draft!" content="This project page is a draft and is not yet published to the public." />
+{/if}
+</div>
+
 <div class="flex flex-col justify-center items-center container p-5 border-2 rounded-2xl project">
     <div class="flex flex-col items-center">
-        <div class="pb-2 flex flex-col items-center gap-4">
-        <h1 class="text-4xl font-bold">{data.project.data[0].name}</h1>
-        <p class="text-xl">{data.project.data[0].description}</p>
-        <img src="{data.directus_api_url}/assets/{data.project.data[0].Cover}/image.png?quality=50&width=1024&height=328" alt={data.project.data[0].title} class="w-fit rounded-xl" />
+        <div class="py-2 flex flex-col items-center gap-4">
+            <h1 class="text-4xl font-bold">{data.project.data[0].name}</h1>
+            <p class="text-xl">{data.project.data[0].description}</p>
+            {#if data.project.data[0].stack}
+                <div class="flex flex-row items-center gap-4 pb-2">
+                    {#each data.project.data[0].stack as stack}
+                        <div class="flex flex-row items-center gap-4">
+                            <p class="border-solid p-2 rounded-2xl border-2 text-center">{stack}</p>
+                        </div>
+                    {/each}
+                </div>
+            {/if}
+            {#if data.project.data[0].Cover}
+            <img src="{data.directus_api_url}/assets/{data.project.data[0].Cover}/image.png?quality=50&width=1024&height=328" alt={data.project.data[0].title} class="w-fit rounded-xl" />
+            {/if}
         </div>
-        <div class="prose post pt-2 flex flex-col items-left">
+        <div class="prose post flex flex-col items-left">
             {@html data.project.data[0].content}
         </div>
         <!-- link -->
