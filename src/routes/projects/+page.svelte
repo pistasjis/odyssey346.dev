@@ -25,12 +25,12 @@
 
 {#if data}
     <div class="flex flex-col items-center container">
-    <h1 class="text-4xl font-bold">Projects</h1>
+        <h1 class="text-4xl font-bold">Projects</h1>
     </div>
-    <div class="flex flex-row flex-wrap gap-8 items-left container mb-5">
+    <div class="flex gap-8 items-left container mb-5 flex-wrap">
     {#each data.projects.data as project}
         {#if project.status == "published"}
-        <a href="/projects/{project.name}" class="flex flex-col items-left rounded-xl mt-5 gap-4 border-2 border-solid p-5 w-full hover:border-purple-500 transition-all">
+        <a href="/projects/{project.name}" class="flex flex-col rounded-xl mt-5 gap-4 border-2 border-solid p-5 hover:border-purple-500 transition-all">
             <h1 class="text-4xl font-bold">{project.name}</h1>
             <img src="{data.directus_api_url}/assets/{project.Cover}/image.png?quality=50&width=1024&height=328" alt={project.title} class="w-fit rounded-xl" />
             <p class="text-xl">{project.description}</p>
@@ -38,5 +38,10 @@
         </a>
         {/if}
     {/each}
+    </div>
+{:else}
+    <div class="flex flex-col items-center container">
+        <h1 class="text-4xl font-bold">Projects</h1>
+        <p class="text-xl">No projects found</p>
     </div>
 {/if}
