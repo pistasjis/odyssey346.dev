@@ -30,7 +30,7 @@
     <div class="flex flex-row flex-wrap gap-8 items-left container mb-5">
     {#each data.projects.data as project}
         {#if project.status == "published"}
-        <a href="/projects/{project.name}" class="flex flex-col items-left rounded-xl mt-5 gap-4 border-2 border-solid p-5 w-full hover:bg-thirdbackground transition-all">
+        <a href="/projects/{project.name}" class="flex flex-col items-left rounded-xl mt-5 gap-4 border-2 border-solid p-5 w-full hover:border-purple-500 transition-all">
             <h1 class="text-4xl font-bold">{project.name}</h1>
             <img src="{data.directus_api_url}/assets/{project.Cover}/image.png?quality=50&width=1024&height=328" alt={project.title} class="w-fit rounded-xl" />
             <p class="text-xl">{project.description}</p>
