@@ -36,6 +36,7 @@ export default defineConfig({
               'background': 'var(--second-background) !important',
               'font-family': 'var(--font-mono) !important',
               'white-space': 'pre-wrap !important',
+              'word-break': 'break-word !important',
             },
             'a': {
               'text-underline-offset': '5px',
@@ -56,6 +57,10 @@ export default defineConfig({
             },
             'code::after': {
               'display': 'none',
+            },
+            'img': {
+              'border-radius': '0.5rem',
+              'max-width': '100%',
             },
           }
         }),
