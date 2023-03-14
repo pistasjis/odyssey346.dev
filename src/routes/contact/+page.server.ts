@@ -1,6 +1,6 @@
 import type { Actions } from "./$types";
 import { env } from "$env/dynamic/private";
-
+import { sendMatrixMessage } from "brunost";
 
 export const actions: Actions = {
     default: async ({ request, getClientAddress}) => {
@@ -22,20 +22,24 @@ export const actions: Actions = {
             return { error: true, message: "Something went wrong." };
         }
 
-        // send Discord webhook
-        const webhook = await fetch(env.discord_webhook_url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                content: `**New contact form submission**\n\n**Name:** ${name}\n**Email:** ${email}\n**Message:** ${message}\n**IP:** ${ip}`
-            })
-        });
+        // send Matrix message
+        const matrix = await sendMatrixMessage(env.matrix_homeserver, env.matrix_roomid, env.matrix_token, `New contact form submission!\n\nFrom: ${name} (${email})\nMessage: ${message}\nIP: ${ip}`);
 
-        if (webhook.status !== 204) {
-            return { error: true, message: "Something went wrong." };
-        }
+        console.log(matrix);
+        // // send Discord webhook
+        // const webhook = await fetch(env.discord_webhook_url, {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: JSON.stringify({
+        //         content: `**New contact form submission**\n\n**Name:** ${name}\n**Email:** ${email}\n**Message:** ${message}\n**IP:** ${ip}`
+        //     })
+        // });
+
+        // if (webhook.status !== 204) {
+        //     return { error: true, message: "Something went wrong." };
+        // }
 
         return { success: true, message: "Message sent!" };
     }
