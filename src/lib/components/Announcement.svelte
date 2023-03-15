@@ -1,13 +1,15 @@
 <script lang="ts">
 	import dayjs from "dayjs";
 
+	import SvelteMarkdown from 'svelte-markdown'
+
 	export let data: any;
 </script>
 
 {#if data}
 	{#if !data.error}
 		{#if data.incident}
-			<div class="flex flex-col items-left justify-left gap-2 announcement mt-5 p-4 rounded-lg max-w-xl">
+			<div class="flex flex-col items-left justify-left gap-2 announcement mt-5 p-4 rounded-lg max-w-xl w-full">
 				<div class="flex flex-row items-center justify-left gap-2">
 				{#if data.incident.style === 'info'}
 					<div class="i-tabler-info-circle text-2xl" />
@@ -23,7 +25,7 @@
 				{/if}
 				<h2 class="text-2xl">{data.incident.title}</h2>
 				</div>
-				<p class="break-all max-w-max">{data.incident.content}</p>
+				<p class="break-all max-w-max"><SvelteMarkdown source={data.incident.content} /></p>
 				<p>Created at {dayjs (data.incident.createdDate).format("ddd, DD MMM YYYY HH:mm")}</p>
 			</div>
 		{/if}
