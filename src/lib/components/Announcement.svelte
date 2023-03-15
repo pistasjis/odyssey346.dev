@@ -25,7 +25,7 @@
 				{/if}
 				<h2 class="text-2xl">{data.incident.title}</h2>
 				</div>
-				<p class="break-all max-w-max"><SvelteMarkdown source={data.incident.content} /></p>
+				<p class="break-all max-w-max announcement-content"><SvelteMarkdown source={data.incident.content} /></p>
 				<p>Created at {dayjs (data.incident.createdDate).format("ddd, DD MMM YYYY HH:mm")}</p>
 			</div>
 		{/if}
@@ -33,7 +33,21 @@
 {/if}
 
 
+
 {#if data.incident}
+	<style>
+		.announcement-content > p > a {
+			color: white;
+			text-decoration: underline;
+			text-underline-offset: 0.25rem;
+			transition: all 0.2s ease-in-out;
+		}
+
+		.announcement-content > p > a:hover {
+			color: #0dcaf0;
+		}
+
+	</style>
 	{#if data.incident.style === 'info'}
 		<style>
 			.announcement {
