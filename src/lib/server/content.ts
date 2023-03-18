@@ -10,7 +10,7 @@ if (!building) {
 }
 
 export async function getPosts() {
-    const posts = await fetch(`${env.directus_api_url}/items/Posts`, {
+    const posts = await fetch(`${env.directus_api_url}/items/Posts?sort[]=-date_created`, {
         method: 'GET',
         headers: {
             Authorization: `Bearer ${env.directus_token}`,
@@ -30,7 +30,7 @@ export async function getPost(slug: string) {
 }
 
 export async function getProjects() {
-    const projects = await fetch(`${env.directus_api_url}/items/Projects`, {
+    const projects = await fetch(`${env.directus_api_url}/items/Projects?sort[]=-date_created`, {
         method: 'GET',
         headers: {
             Authorization: `Bearer ${env.directus_token}`,
