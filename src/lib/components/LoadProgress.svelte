@@ -24,7 +24,7 @@
 	out:fade={{ delay: 500 }}
 >
 	<div
-		class="bg-gradient-to-r from-purple-500 to-purple-600 h-full"
+		class="bg-gradient-to-r from-accent to-blue-300 h-full"
 		style="width: {$progress * 100}%"
 	/>
 </div>

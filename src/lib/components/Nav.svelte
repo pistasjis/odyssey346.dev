@@ -16,10 +16,10 @@
         </a>
     </div>
     <div class="navlinks flex items-center gap-2">
-        <a href="/about" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-purple-500" class:border-purple-500={$page.url.pathname === "/about"}>About</a>
-        <a href="/projects" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-purple-500" class:border-purple-500={$page.url.pathname === "/projects"}>Projects</a>
-        <a href="/blog" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-purple-500" class:border-purple-500={$page.url.pathname === "/blog"}>Blog</a>
-        <a href="/contact" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-purple-500" class:border-purple-500={$page.url.pathname === "/contact"}>Contact</a>
+        <a href="/about" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-accent" class:border-accent={$page.url.pathname === "/about"}>About</a>
+        <a href="/projects" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-accent" class:border-accent={$page.url.pathname === "/projects"}>Projects</a>
+        <a href="/blog" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-accent" class:border-accent={$page.url.pathname === "/blog"}>Blog</a>
+        <a href="/contact" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-accent" class:border-accent={$page.url.pathname === "/contact"}>Contact</a>
     </div>
 </nav>
 
