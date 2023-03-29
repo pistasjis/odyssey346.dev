@@ -34,7 +34,7 @@
         {#if form?.error}
             <div class="text-red-500 text-xl mt-5">An error occurred while sending your message.</div>
         {/if}
-        <form class="flex flex-col items-left rounded-xl mt-5 gap-4 mb-5" method="POST">
+        <form class="flex flex-col items-left rounded-xl mt-5 gap-4" method="POST">
             <input
                 type="text"
                 name="name"
@@ -61,6 +61,7 @@
                 >Submit</button
             >
         </form>
-        <p class="break-all">If the form (for some reason) doesn't work, please shoot me an e-mail at <Link text="hi[at]odyssey346.dev" href="mailto:hi@odyssey346.dev" />.</p>
+        <h2 class="text-3xl font-bold mt-5">E-mail</h2>
+        <p>You can send me an e-mail at <Link text="hi[at symbol]odyssey346.dev" href="mailto:hi@odyssey346.dev" />. PGP key available <Link href="https://keys.openpgp.org/vks/v1/by-fingerprint/DAB12242014B86AF1800BDC5D31FE56BE6D78DB1" text="here." /></p>
     </div>
 </div>
