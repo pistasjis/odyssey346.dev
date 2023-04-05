@@ -27,8 +27,8 @@
 <div class="flex flex-col justify-center items-center container">
     <div class="flex flex-col items-left">
         <h1 class="text-4xl font-bold bg-clip-text bg-gradient-to-r from-accent to-blue-500 text-transparent">Contact</h1>
-        <p class="text-xl">Fill the form, and I will receive your message.</p>
-        {#if form?.success}
+        <p class="text-xl">Various contact methods</p>
+        <!-- {#if form?.success}
             <div class="text-green-500 text-xl mt-5">Your message has been sent!</div>
         {/if}
         {#if form?.error}
@@ -60,7 +60,7 @@
                 class="border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:bg-thirdbackground"
                 >Submit</button
             >
-        </form>
+        </form> -->
         <h2 class="text-3xl font-bold mt-5">E-mail</h2>
         <p>You can send me an e-mail at <Link text="hi[at symbol]odyssey346.dev" href="mailto:hi@odyssey346.dev" />. PGP key available <Link href="https://keys.openpgp.org/vks/v1/by-fingerprint/DAB12242014B86AF1800BDC5D31FE56BE6D78DB1" text="here." /></p>
     </div>
