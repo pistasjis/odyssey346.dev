@@ -29,15 +29,13 @@
     }}
 />
 
-<div class="flex flec-col justify-center items-center container">
-{#if data.project.data[0].status == "draft"}
-    <InfoBanner title="This project page is a draft!" content="This project page is a draft and is not yet published to the public." />
-{/if}
-</div>
 
-<div class="flex flex-col justify-center items-center container p-5 border-2 rounded-2xl project">
+<div class="flex flex-col justify-center items-center container p-5 project">
     <div class="flex flex-col items-center">
-        <div class="py-2 flex flex-col items-center gap-4">
+        <div class="py-2 flex flex-col gap-4">
+            {#if data.project.data[0].status == "draft"}
+                <InfoBanner title="This project page is a draft!" content="This project page is a draft and is not yet published to the public." />
+            {/if}
             <h1 class="text-4xl font-bold">{data.project.data[0].name}</h1>
             <p class="text-xl">{data.project.data[0].description}</p>
             {#if data.project.data[0].stack}
