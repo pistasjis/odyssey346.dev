@@ -3,9 +3,9 @@
 </script>
 
 <div class="flex flex-col items-left justify-left gap-4 mt-5 w-full max-w-xl">
-    <h1 class="text-3xl font-bold">Hi, I'm <span class="bg-gradient-to-r from-accent to-blue-500 text-transparent bg-clip-text">Odyssey</span>346!</h1>
+    <h1 class="text-3xl font-bold">Hi, I'm <span class="bg-gradient-to-r from-accent to-blue-300 text-transparent bg-clip-text">Odyssey</span>346!</h1>
     <p>I like developing websites and hosting things on my VPS(es).</p>
-    <div class="flex flex-row gap-4 text-3xl">
+    <div class="flex flex-row gap-4 text-3xl flex-wrap">
         <div class="i-simple-icons:git hover:text-[#F05032] transition-all" title="Git"></div>
         <div class="i-simple-icons:svelte hover:text-[#FF3E00] transition-all" title="Svelte"></div>
         <div class="i-simple-icons:directus hover:text-[#8866ff] transition-all" title="Directus"></div>

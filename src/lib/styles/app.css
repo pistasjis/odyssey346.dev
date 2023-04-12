@@ -12,7 +12,11 @@ body {
 }
 
 .container {
-	@apply mx-auto mt-5 max-w-2xl px-8 mb-5;
+	@apply mx-auto mt-5 max-w-3xl px-8 mb-5;
+}
+
+.prose {
+    @apply max-w-none;
 }
 
 @media screen and (max-width: 768px) {

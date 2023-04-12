@@ -58,7 +58,7 @@
 		<div class="prose post pt-2 flex flex-col items-left">
 			{@html data.post.data[0].content}
 		</div>
-		<div class="endbuttons flex justify-between w-full mt-5">
+		<div class="endbuttons flex justify-between w-full">
 			<ReadMoreButton href="/blog" text="Back to blog" />
 			<ReadMoreButton
 				href="mailto:hi@odyssey346.dev?subject=Feedback on your blog article '{data.post.data[0]

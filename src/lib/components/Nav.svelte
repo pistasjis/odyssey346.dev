@@ -12,7 +12,7 @@
     <slot /> <!-- slot for nav progress -->
     <div class="flex flex-row items-center justify-center">
         <a href="/" class="odyssey">
-            <h1 class="text-2xl"><span class="bg-gradient-to-r from-accent to-blue-500 text-transparent bg-clip-text">Odyssey</span>346</h1>
+            <h1 class="text-2xl"><span class="bg-gradient-to-r from-accent to-blue-300 text-transparent bg-clip-text">Odyssey</span>346</h1>
         </a>
     </div>
     <div class="navlinks flex items-center gap-2">
