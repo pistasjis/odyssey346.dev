@@ -7,6 +7,7 @@
 
     import SvelteSeo from "svelte-seo";
 	import InfoBanner from "$lib/components/InfoBanner.svelte";
+	import Draft from "$lib/components/Draft.svelte";
 
     export let data: PageData;
 </script>
@@ -34,7 +35,7 @@
     <div class="flex flex-col items-center">
         <div class="py-2 flex flex-col gap-4">
             {#if data.project.data[0].status == "draft"}
-                <InfoBanner title="This project page is a draft!" content="This project page is a draft and is not yet published to the public." />
+                <Draft />
             {/if}
             <h1 class="text-4xl font-bold">{data.project.data[0].name}</h1>
             <p class="text-xl">{data.project.data[0].description}</p>
@@ -42,7 +43,7 @@
                 <div class="flex flex-row items-center gap-4 pb-2">
                     {#each data.project.data[0].stack as stack}
                         <div class="flex flex-row items-center gap-4">
-                            <p class="border-solid p-2 rounded-2xl border-2 text-center">{stack}</p>
+                            <p class="border-solid p-2 rounded-full border-2 text-center">{stack}</p>
                         </div>
                     {/each}
                 </div>

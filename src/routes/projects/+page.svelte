@@ -24,10 +24,12 @@
 />
 
 {#if data}
-    <div class="flex flex-col items-center container">
-        <h1 class="text-4xl font-bold">Projects</h1>
+<div class="container">
+    <div class="flex flex-col items-left">
+        <h1 class="text-4xl pb-1 font-bold bg-clip-text bg-gradient-to-r from-accent to-blue-300 text-transparent">Projects</h1>
+        <p class="text-xl">Projects I've worked on. You can see what skills I've learned from these in my bio.</p>
     </div>
-    <div class="flex gap-8 items-left container mb-5 flex-wrap">
+    <div class="flex gap-8 items-left mb-5 flex-wrap">
     {#each data.projects.data as project}
         {#if project.status == "published"}
         <a href="/projects/{project.name}" class="flex flex-col rounded-xl mt-5 gap-4 border-2 border-solid p-5 hover:border-accent transition-all">
@@ -39,6 +41,7 @@
         {/if}
     {/each}
     </div>
+</div>
 {:else}
     <div class="flex flex-col items-center container">
         <h1 class="text-4xl font-bold">Projects</h1>

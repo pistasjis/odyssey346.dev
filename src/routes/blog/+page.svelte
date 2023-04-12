@@ -24,10 +24,12 @@
 />
 
 {#if data}
-    <div class="flex flex-col items-center container">
-        <h1 class="text-4xl font-bold">Blog</h1>
+<div class="container">
+    <div class="flex flex-col">
+        <h1 class="text-4xl pb-1 font-bold bg-clip-text bg-gradient-to-r from-accent to-blue-300 text-transparent">Blog</h1>
+        <p class="text-xl">Blog posts I've written. I focus on technical and meta stuff.</p>
     </div>
-    <div class="flex flex-row flex-wrap gap-8 items-left container mb-5">
+    <div class="flex flex-row flex-wrap gap-8 items-left mb-5">
     {#each data.posts.data as post}
         {#if post.publish_status == "published"}
             <a href="/blog/{post.slug}" class="flex flex-col items-left rounded-xl mt-5 gap-4 border-2 border-solid p-5 hover:border-accent transition-all">
@@ -41,4 +43,5 @@
         {/if}
     {/each}
     </div>
+</div>
 {/if}
