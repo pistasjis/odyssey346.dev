@@ -8,6 +8,7 @@
     <div class="flex flex-row gap-4 text-3xl flex-wrap">
         <div class="i-simple-icons:git hover:text-[#F05032] transition-all" title="Git"></div>
         <div class="i-simple-icons:svelte hover:text-[#FF3E00] transition-all" title="Svelte"></div>
+        <div class="i-simple-icons:blazor hover:text-[#512BD4] transition-all" title="Blazor"></div>
         <div class="i-simple-icons:directus hover:text-[#8866ff] transition-all" title="Directus"></div>
         <div class="i-simple-icons:go hover:text-[#00ADD8] transition-all" title="Go"></div>
         <div class="i-simple-icons:docker hover:text-[#2496ED] transition-all" title="Docker"></div>
