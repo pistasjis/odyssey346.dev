@@ -9,7 +9,7 @@
 {#if data}
 	{#if !data.error}
 		{#if data.incident}
-			<div class="flex flex-col items-left justify-left gap-2 announcement mt-5 p-4 rounded-2xl max-w-xl w-full">
+			<div class="flex flex-col items-left justify-left gap-2 announcement mt-5 p-4 rounded-3xl max-w-xl w-full">
 				<div class="flex flex-row items-center justify-left gap-2">
 				{#if data.incident.style === 'info'}
 					<div class="i-tabler-info-circle text-2xl" />

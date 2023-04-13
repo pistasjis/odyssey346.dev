@@ -8,10 +8,6 @@ nav {
         position: static;
         top: 0;
     }
-    .navlinks {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
     .navlinks a {
         @apply w-2/3 max-w-screen text-center;
     }
