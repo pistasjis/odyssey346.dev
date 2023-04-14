@@ -7,7 +7,7 @@
 
 <div class="flex flex-col justify-center items-center container">
     <Hero />
-	<div class="flex flex-col items-left justify-left gap-2 announcement mt-5 p-4 rounded-lg w-full max-w-xl">
+	<div class="flex flex-col items-left justify-left gap-2 announcement mt-5 p-4 rounded-3xl w-full max-w-xl">
 		<div class="flex flex-row items-center justify-left gap-2">
             {#if $page.status === 404}
                 <div class="i-tabler-info-circle text-2xl" />
