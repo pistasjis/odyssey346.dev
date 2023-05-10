@@ -53,22 +53,16 @@
                     {/if}
                 </div>
             </section>
-        <div class="max-w-xl w-full">
-            <div class="prose-override prose post flex flex-col items-left max-w-xl w-full">
-                {@html data.project.data[0].content}
+        <div class="content">
+            <div class="max-w-xl w-full">
+                <div class="prose-override prose post flex flex-col items-left max-w-xl w-full">
+                    {@html data.project.data[0].content}
+                </div>
+            </div>
+            <!-- link -->
+            <div class="endbuttons flex justify-between max-w-xl w-full">
+                <ReadMoreButton href="/projects" text="Back to projects" />
+                <ReadMoreButton href="{data.project.data[0].link}" text="Check it out" />
             </div>
         </div>
-        <!-- link -->
-        <div class="endbuttons flex justify-between max-w-xl w-full">
-            <ReadMoreButton href="/projects" text="Back to projects" />
-            <ReadMoreButton href="{data.project.data[0].link}" text="Check it out" />
-        </div>
 </div>
-
-<style>
-    @media screen and (max-width: 768px) {
-        .project {
-            width: 90%;
-        }
-    }
-</style>
