@@ -53,7 +53,7 @@
 			</div>
 		</section>
 		<div class="pb-2" />
-		<div class="max-w-xl w-full">
+		<div class="max-w-xl w-full content">
 			<div class="prose post pt-2 flex flex-col items-left">
 				{@html data.post.data[0].content}
 			</div>

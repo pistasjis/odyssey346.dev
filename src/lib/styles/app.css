@@ -37,6 +37,14 @@ body {
     .container {
         @apply mb-5 mt-1  text-ellipsis overflow-hidden max-w-auto;
     }
+
+    section > * {
+        @apply px-5;
+    }
+
+    .content {
+        @apply px-5;
+    }
 }
 
 @media screen and (prefers-color-scheme: light) {

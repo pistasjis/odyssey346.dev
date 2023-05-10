@@ -29,6 +29,8 @@
     <section class="second-background">
         <Hero />
     </section>
-    <Announcement data={data.kuma} />
-    <Bio />
+    <div class="content">
+        <Announcement data={data.kuma} />
+        <Bio />
+    </div>
 </div>

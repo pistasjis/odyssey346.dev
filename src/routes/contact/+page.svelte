@@ -31,6 +31,7 @@
             <p class="text-xl">Various contact methods</p>
         </div>
     </section>
+    <div class="content">
         <!-- {#if form?.success}
             <div class="text-green-500 text-xl mt-5">Your message has been sent!</div>
         {/if}
@@ -66,6 +67,7 @@
         </form> -->
         <div class="max-w-xl w-full">
             <h2 class="text-3xl font-bold mt-5">E-mail</h2>
-            <p>You can send me an e-mail at <Link text="hi[at symbol]odyssey346.dev" href="mailto:hi@odyssey346.dev" />. PGP key available <Link href="https://keys.openpgp.org/vks/v1/by-fingerprint/DAB12242014B86AF1800BDC5D31FE56BE6D78DB1" text="here." /></p>
+            <p>You can send me an e-mail at <Link text="hi[at symbol]pistasjis.net" href="mailto:hi@pistasjis.net" />. <span class="font-bold">NB!</span> This e-mail address forwards to another email hosted elsewhere, so you'll get a response from a different e-mail address. Because of this I can't provide a PGP key on this site.</p>
         </div>
+    </div>
 </div>
