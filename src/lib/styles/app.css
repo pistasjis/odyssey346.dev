@@ -29,6 +29,10 @@ body {
     @apply max-w-none;
 }
 
+.special {
+    @apply pr-25;
+}
+
 .prose-override {
     max-width: initial !important;
 }
@@ -44,6 +48,10 @@ body {
 
     .content {
         @apply px-5;
+    }
+
+    .special {
+        @apply pr-20;
     }
 }
 

@@ -25,11 +25,11 @@
     }}
 />
 
-<div class="flex flex-col justify-center items-center">
+<div class="flex flex-col justify-center items-center something">
     <section class="second-background">
         <Hero />
     </section>
-    <div class="content">
+    <div class="content special">
         <Announcement data={data.kuma} />
         <Bio />
     </div>
