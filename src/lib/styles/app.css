@@ -1,15 +1,24 @@
 :root {
-    --background: #0c0c17;
-    --second-background: #1f1f3d;
+    --background: #151515;
+    --second-background: #468b74;
     --third-background: #333363;
+    --fourth-background: #303030;
     --text: #f5f5f5;
-    --accent: #05d2c1;
+    --accent: aquamarine;
     --font-mono: 'JetBrains Mono', monospace;
     color-scheme: dark;
 }
 
 body {
     @apply bg-background text-text font-sans transition-all;
+}
+
+.second-background {
+    @apply bg-secondbackground w-full pb-5 text-white;
+}
+
+.second-background > * {
+    @apply mx-auto my-auto;
 }
 
 .container {
@@ -20,8 +29,25 @@ body {
     @apply max-w-none;
 }
 
+.prose-override {
+    max-width: initial !important;
+}
+
 @media screen and (max-width: 768px) {
     .container {
         @apply mb-5 mt-1  text-ellipsis overflow-hidden max-w-auto;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --background: #f5f5f5;
+        --second-background: #468b74;
+        --third-background: #333363;
+        --fourth-background: #e1e1e1;
+        --text: #151515;
+        --accent: aquamarine;
+        --font-mono: 'JetBrains Mono', monospace;
+        color-scheme: light;
     }
 }

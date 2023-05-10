@@ -13,17 +13,17 @@
 </script>
 
 <svelte:head>
-	<title>{data.post.data[0].title} | Odyssey346</title>
+	<title>{data.post.data[0].title} | Pistasjis</title>
 </svelte:head>
 
 <SvelteSeo
-	title="{data.post.data[0].title} | Odyssey346"
+	title="{data.post.data[0].title} | Pistasjis"
 	description={data.post.data[0].description}
 	canonical="https://odyssey346.dev/blog/{data.post.data[0].slug}"
 	openGraph={{
 		type: 'article',
 		url: `https://odyssey346.dev/blog/${data.post.data[0].slug}`,
-		title: `${data.post.data[0].title} | Odyssey346`,
+		title: `${data.post.data[0].title} | Pistasjis`,
 		description: `${data.post.data[0].description}`,
 		images: [
 			{
@@ -34,35 +34,36 @@
 	}}
 />
 
-<div class="flex flex-col justify-center items-center container">
-	<div class="flex flex-col items-center">
-		<div class="pb-2 flex flex-col items-center gap-4">
-			<h1 class="text-4xl font-bold pb-1 bg-clip-text bg-gradient-to-r from-accent to-blue-300 text-transparent">{data.post.data[0].title}</h1>
-			<p class="text-xl">{data.post.data[0].description}</p>
-			{#if data.post.data[0].cover}
-			<img
-				src="{data.directus_api_url}/assets/{data.post.data[0]
-					.cover}/image.png?quality=50&width=1024&height=328"
-				alt={data.post.data[0].title}
-				class="w-fit rounded-2xl"
-			/>
-			{/if}
-			{#if data.post.data[0].publish_status == 'draft'}
-				<Draft />
-			{/if}
-		</div>
+<div class="flex flex-col items-center justify-center">
+		<section class="second-background">
+			<div class="max-w-xl w-full">
+				<h1 class="text-4xl font-bold pb-1">{data.post.data[0].title}</h1>
+				<p class="text-xl">{data.post.data[0].description}</p>
+				{#if data.post.data[0].cover}
+				<img
+					src="{data.directus_api_url}/assets/{data.post.data[0]
+						.cover}/image.png?quality=50&width=1024&height=328"
+					alt={data.post.data[0].title}
+					class="pt-2 w-fit rounded-md"
+				/>
+				{/if}
+				{#if data.post.data[0].publish_status == 'draft'}
+					<Draft />
+				{/if}
+			</div>
+		</section>
 		<div class="pb-2" />
-		<div class="w-20 h-1 bg-gradient-to-r from-accent to-blue-300 rounded-full" />
-		<div class="prose post pt-2 flex flex-col items-left">
-			{@html data.post.data[0].content}
+		<div class="max-w-xl w-full">
+			<div class="prose post pt-2 flex flex-col items-left">
+				{@html data.post.data[0].content}
+			</div>
 		</div>
-		<div class="endbuttons flex justify-between w-full">
+		<div class="endbuttons flex justify-between w-full max-w-xl mb-5">
 			<ReadMoreButton href="/blog" text="Back to blog" />
 			<ReadMoreButton
-				href="mailto:hi@odyssey346.dev?subject=Feedback on your blog article '{data.post.data[0]
+				href="mailto:hi@pistasjis.net?subject=Feedback on your blog article '{data.post.data[0]
 					.title}'"
 				text="Send feedback on E-mail"
 			/>
 		</div>
-	</div>
 </div>

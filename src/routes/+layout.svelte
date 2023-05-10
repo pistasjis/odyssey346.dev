@@ -7,6 +7,7 @@
     import Elevator from "$lib/components/Elevator.svelte";
     import Noscript from "$lib/components/Noscript.svelte";
     import LoadProgress from "$lib/components/LoadProgress.svelte";
+    import BetaBanner from "$lib/components/BetaBanner.svelte";
 	import type { LayoutData } from "./$types";
     import { navigating } from "$app/stores";
     export let data: LayoutData;
@@ -17,11 +18,9 @@
     <Noscript />
 </noscript> -->
 
-<Nav>
-    {#if $navigating}
-		<LoadProgress />
-	{/if}
-</Nav>
+<BetaBanner />
+
+<Nav />
 
 <main>
     <!--
@@ -29,9 +28,7 @@
         <Elevator />
     {/if}
     -->
-    <Transition pathname={data.pathname}>
         <slot />
-    </Transition>
 </main>
 
 <svelte:window bind:scrollY={YValue} />

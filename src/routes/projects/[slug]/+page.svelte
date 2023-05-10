@@ -31,36 +31,38 @@
 />
 
 
-<div class="flex flex-col justify-center items-center container p-5 project">
-    <div class="flex flex-col items-center">
-        <div class="py-2 flex flex-col gap-4">
+<div class="flex flex-col justify-center items-center project">
             {#if data.project.data[0].status == "draft"}
-                <Draft />
+            <Draft />
             {/if}
-            <h1 class="text-4xl font-bold">{data.project.data[0].name}</h1>
-            <p class="text-xl">{data.project.data[0].description}</p>
-            {#if data.project.data[0].stack}
-                <div class="flex flex-row items-center gap-4 pb-2">
-                    {#each data.project.data[0].stack as stack}
-                        <div class="flex flex-row items-center gap-4">
-                            <p class="border-solid p-2 rounded-full border-2 text-center">{stack}</p>
+            <section class="second-background">
+                <div class="flex flex-col gap-2 max-w-xl w-full">
+                    <h1 class="text-4xl font-bold">{data.project.data[0].name}</h1>
+                    <p class="text-xl">{data.project.data[0].description}</p>
+                    {#if data.project.data[0].stack}
+                        <div class="flex flex-row items-center gap-4 pb-2">
+                            {#each data.project.data[0].stack as stack}
+                                <div class="flex flex-row items-center gap-4">
+                                    <p class="border-solid p-2 rounded-full border-2 text-center">{stack}</p>
+                                </div>
+                            {/each}
                         </div>
-                    {/each}
+                    {/if}
+                    {#if data.project.data[0].Cover}
+                    <img src="{data.directus_api_url}/assets/{data.project.data[0].Cover}/image.png?quality=50&width=1024&height=328" alt={data.project.data[0].title} class="w-fit rounded-md" />
+                    {/if}
                 </div>
-            {/if}
-            {#if data.project.data[0].Cover}
-            <img src="{data.directus_api_url}/assets/{data.project.data[0].Cover}/image.png?quality=50&width=1024&height=328" alt={data.project.data[0].title} class="w-fit rounded-xl" />
-            {/if}
-        </div>
-        <div class="prose post flex flex-col items-left">
-            {@html data.project.data[0].content}
+            </section>
+        <div class="max-w-xl w-full">
+            <div class="prose-override prose post flex flex-col items-left max-w-xl w-full">
+                {@html data.project.data[0].content}
+            </div>
         </div>
         <!-- link -->
-        <div class="endbuttons flex justify-between w-full">
+        <div class="endbuttons flex justify-between max-w-xl w-full">
             <ReadMoreButton href="/projects" text="Back to projects" />
             <ReadMoreButton href="{data.project.data[0].link}" text="Check it out" />
         </div>
-    </div>
 </div>
 
 <style>

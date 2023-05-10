@@ -24,10 +24,13 @@
     }}
 />
 
-<div class="flex flex-col justify-center items-center container">
-    <div class="flex flex-col items-left">
-        <h1 class="text-4xl font-bold bg-clip-text bg-gradient-to-r from-accent to-blue-500 text-transparent">Contact</h1>
-        <p class="text-xl">Various contact methods</p>
+<div class="flex flex-col justify-center items-center">
+    <section class="second-background">
+        <div class="flex flex-col items-left justify-left mt-5 w-full max-w-xl">
+            <h1 class="text-4xl font-bold">Contact</h1>
+            <p class="text-xl">Various contact methods</p>
+        </div>
+    </section>
         <!-- {#if form?.success}
             <div class="text-green-500 text-xl mt-5">Your message has been sent!</div>
         {/if}
@@ -61,7 +64,8 @@
                 >Submit</button
             >
         </form> -->
-        <h2 class="text-3xl font-bold mt-5">E-mail</h2>
-        <p>You can send me an e-mail at <Link text="hi[at symbol]odyssey346.dev" href="mailto:hi@odyssey346.dev" />. PGP key available <Link href="https://keys.openpgp.org/vks/v1/by-fingerprint/DAB12242014B86AF1800BDC5D31FE56BE6D78DB1" text="here." /></p>
-    </div>
+        <div class="max-w-xl w-full">
+            <h2 class="text-3xl font-bold mt-5">E-mail</h2>
+            <p>You can send me an e-mail at <Link text="hi[at symbol]odyssey346.dev" href="mailto:hi@odyssey346.dev" />. PGP key available <Link href="https://keys.openpgp.org/vks/v1/by-fingerprint/DAB12242014B86AF1800BDC5D31FE56BE6D78DB1" text="here." /></p>
+        </div>
 </div>

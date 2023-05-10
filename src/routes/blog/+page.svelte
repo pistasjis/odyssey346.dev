@@ -24,18 +24,20 @@
 />
 
 {#if data}
-<div class="container">
-    <div class="flex flex-col">
-        <h1 class="text-4xl pb-1 font-bold bg-clip-text bg-gradient-to-r from-accent to-blue-300 text-transparent">Blog</h1>
-        <p class="text-xl">Blog posts I've written. I focus on technical and meta stuff.</p>
-    </div>
-    <div class="flex flex-row flex-wrap gap-8 items-left mb-5">
+<div class="flex flex-col justify-center items-center">
+    <section class="second-background">
+        <div class="flex flex-col w-full max-w-xl">
+            <h1 class="text-4xl pb-1 font-bold">Blog</h1>
+            <p class="text-xl">Blog posts I've written. I focus on technical and meta stuff.</p>
+        </div>
+    </section>
+    <div class="flex flex-row flex-wrap gap-8 items-left mb-5 max-w-xl w-full">
     {#each data.posts.data as post}
         {#if post.publish_status == "published"}
-            <a href="/blog/{post.slug}" class="flex flex-col items-left rounded-xl mt-5 gap-4 border-2 border-solid p-5 hover:border-accent transition-all hover:border-accent">
+            <a href="/blog/{post.slug}" class="flex flex-col bg-fourthbackground items-left mt-5 gap-4 border-b-2 border-solid p-5 hover:border-accent transition-all hover:border-accent">
                 <h1 class="text-4xl font-bold">{post.title}</h1>
                 {#if post.cover}
-                <img src="{data.directus_api_url}/assets/{post.cover}/image.png?quality=50&width=1024&height=328" alt={post.title} class="w-fit rounded-xl" />
+                <img src="{data.directus_api_url}/assets/{post.cover}/image.png?quality=50&width=1024&height=328" alt={post.title} class="w-fit rounded-md" />
                 {/if}
                 <p class="text-xl">{post.description}</p>
                 <p>{dayjs (post.date_created).format("ddd, DD MMM YYYY HH:mm")}</p>

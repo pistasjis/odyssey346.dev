@@ -10,23 +10,25 @@
 </script>
 
 <svelte:head>
-    <title>Odyssey346</title>
+    <title>Pistasjis</title>
 </svelte:head>
 
 <SvelteSeo
-    title="Odyssey346"
+    title="Pistasjis"
     description="15 year old developer and sysadmin"
-    canonical="https://odyssey346.dev"
+    canonical="https://pistasjis.net"
     openGraph={{
         type: "article",
-        url: `https://odyssey346.dev`,
-        title: `Odyssey346`,
+        url: `https://pistasjis.net`,
+        title: `Pistasjis`,
         description: `15 year old developer and sysadmin`,
     }}
 />
 
-<div class="flex flex-col justify-center items-center container">
-    <Hero />
+<div class="flex flex-col justify-center items-center">
+    <section class="second-background">
+        <Hero />
+    </section>
     <Announcement data={data.kuma} />
     <Bio />
 </div>

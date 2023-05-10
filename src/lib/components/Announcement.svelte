@@ -9,7 +9,7 @@
 {#if data}
 	{#if !data.error}
 		{#if data.incident}
-			<div class="flex flex-col items-left justify-left gap-2 announcement mt-5 p-4 rounded-3xl max-w-xl w-full">
+			<div class="flex flex-col items-left justify-left gap-2 announcement mt-5 p-4 bg-fourthbackground max-w-xl w-full">
 				<div class="flex flex-row items-center justify-left gap-2">
 				{#if data.incident.style === 'info'}
 					<div class="i-tabler-info-circle text-2xl" />
@@ -44,35 +44,35 @@
 		}
 
 		.announcement-content > p > a:hover {
-			color: #0dcaf0;
+			text-decoration-color: var(--accent);
 		}
 
 	</style>
 	{#if data.incident.style === 'info'}
 		<style>
 			.announcement {
-				border: 3px solid #0dcaf0;
+				border-bottom: 3px solid #0dcaf0;
 			}
 		</style>
 	{/if}
 	{#if data.incident.style === 'warning'}
 		<style>
 			.announcement {
-				border: 3px solid #f8a306;
+				border-bottom: 3px solid #f8a306;
 			}
 		</style>
 	{/if}
 	{#if data.incident.style === 'danger'}
 		<style>
 			.announcement {
-				border: 3px solid #dc3545;
+				border-bottom: 3px solid #dc3545;
 			}
 		</style>
 	{/if}
 	{#if data.incident.style === 'primary'}
 		<style>
 			.announcement {
-				border: 3px solid #198754;
+				border-bottom: 3px solid #198754;
 			}
 		</style>
 	{/if}

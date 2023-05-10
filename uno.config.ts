@@ -18,7 +18,7 @@ export default defineConfig({
           provider: 'bunny', // default provider
           fonts: {
             // these will extend the default theme
-            sans: ["Outfit", "sans-serif"],
+            sans: ["Space Grotesk", "Outfit", "sans-serif"],
             mono: ["JetBrains Mono", "monospace"],
           },
         }),
@@ -33,8 +33,9 @@ export default defineConfig({
           selectorName: 'prose',
           cssExtend: {
             'pre': {
-              'background': 'var(--second-background) !important',
+              'background': 'var(--fourth-background) !important',
               'font-family': 'var(--font-mono) !important',
+              'border-radius': 'initial !important',
               'white-space': 'pre-wrap !important',
               'word-break': 'break-word !important',
             },
@@ -46,9 +47,9 @@ export default defineConfig({
               'transition': 'ease-in-out 0.25s',
             },
             'code': {
-              'background': 'var(--second-background) !important',
+              'background': 'var(--fourth-background) !important',
               'padding': '0.25rem 0.5rem',
-              'border-radius': '0.25rem',
+              'border-radius': 'initial !important',
               'font-weight': '500',
               'white-space': 'pre-wrap !important',
             },
@@ -76,9 +77,10 @@ export default defineConfig({
             accent: 'var(--accent)',
             secondbackground: 'var(--second-background)',
             thirdbackground: 'var(--third-background)',
+            fourthbackground: 'var(--fourth-background)',
         },
         fontFamily: {
-          sans: ["Outfit", "sans-serif"],
+          sans: ["Space Grotesk", "Outfit", "sans-serif"],
         },
     }
 })
