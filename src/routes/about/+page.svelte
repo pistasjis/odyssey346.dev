@@ -13,13 +13,13 @@
 </svelte:head>
 
 <SvelteSeo
-    title="About | Odyssey346"
+    title="About | Pistasjis"
     description="About me and stuff"
-    canonical="https://odyssey346.dev/about"
+    canonical="https://pistasjis.net/about"
     openGraph={{
         type: "article",
-        url: `https://odyssey346.dev/about`,
-        title: `About | Odyssey346`,
+        url: `https://pistasjis.net/about`,
+        title: `About | Pistasjis`,
         description: `About me and stuff`,
     }}
 />
