@@ -35,7 +35,7 @@
             <p>I can accept donations in Monero or Bitcoin.</p>
             <h3 class="text-xl" id="monero">Monero</h3>
             <p>My Monero address is: <code class="break-all bg-fourthbackground p-0.5 rounded-md">45wYu3oEAhu7s9aodftL2iBztYCdKzTZ4gaTRXGRRsN8cfVbdDMrVCEDmUczBiosE3ESVtyRKodXKgcTThyNsF2XGJvee5V</code></p>
-            <p>You can also put in odyssey346.dev in your Monero client if it supports OpenAlias.</p>
+            <p>You can also put "pistasjis.net" in your Monero client if it supports OpenAlias.</p>
             <details title="QR code" class="cursor-pointer">
                 <summary>QR code</summary>
                 <img src="/ha4t207b.bmp" alt="Monero donation QR code" class="w-1/2 rounded-xl" />
