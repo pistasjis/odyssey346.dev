@@ -30,7 +30,7 @@ jobs:
       - name: 'Build:dockerimage'
         uses: docker/build-push-action@v3
         with:
-          tags: ghcr.io/odyssey346/website:ice-latest
+          tags: ghcr.io/pistasjis/website:ice-latest
           context: "."
           push: true
           platforms: linux/amd64,linux/arm64, linux/arm/v8
