@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-    <title>About | Odyssey346</title>
+    <title>About | Pistasjis</title>
 </svelte:head>
 
 <SvelteSeo

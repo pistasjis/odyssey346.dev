@@ -8,18 +8,18 @@
 
 
 <svelte:head>
-    <title>Blog | Odyssey346</title>
+    <title>Blog | Pistasjis</title>
 </svelte:head>
 
 <SvelteSeo
-    title="Blog | Odyssey346"
-    description="Blog posts from Odyssey346"
-    canonical="https://odyssey346.dev/blog"
+    title="Blog | Pistasjis"
+    description="Blog posts from Pistasj"
+    canonical="https://pistasjis.net/blog"
     openGraph={{
         type: "article",
-        url: `https://odyssey346.dev/blog`,
-        title: `Blog | Odyssey346`,
-        description: `Blog posts from Odyssey346`,
+        url: `https://pistasjis.net/blog`,
+        title: `Blog | Pistasjis`,
+        description: `Blog posts from Pistasj`,
     }}
 />
 

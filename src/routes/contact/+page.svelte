@@ -9,18 +9,18 @@
 </script>
 
 <svelte:head>
-    <title>Contact | Odyssey346</title>
+    <title>Contact | Pistasjis</title>
 </svelte:head>
 
 <SvelteSeo
-    title="Contact | Odyssey346"
-    description="How to contact Odyssey346"
-    canonical="https://odyssey346.dev/contact"
+    title="Contact | Pistasjis"
+    description="How to contact Pistasj"
+    canonical="https://pistasjis.net/contact"
     openGraph={{
         type: "article",
-        url: `https://odyssey346.dev/contact`,
-        title: `Contact | Odyssey346`,
-        description: `How to contact Odyssey346`,
+        url: `https://pistasjis.net/contact`,
+        title: `Contact | Pistasjis`,
+        description: `How to contact Pistasj`,
     }}
 />
 

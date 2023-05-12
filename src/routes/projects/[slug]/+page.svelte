@@ -13,13 +13,13 @@
 </script>
 
 <SvelteSeo
-    title="{data.project.data[0].name} | Odyssey346"
+    title="{data.project.data[0].name} | Pistasjis"
     description="{data.project.data[0].description}"
-    canonical="https://odyssey346.dev/projects/{data.project.data[0].slug}"
+    canonical="https://pistasjis.net/projects/{data.project.data[0].slug}"
     openGraph={{
         type: "article",
-        url: `https://odyssey346.dev/blog/${data.project.data[0].slug}`,
-        title: `${data.project.data[0].name} | Odyssey346`,
+        url: `https://pistasjis.net/blog/${data.project.data[0].slug}`,
+        title: `${data.project.data[0].name} | Pistasjis`,
         description: `${data.project.data[0].description}`,
         images: [
             {

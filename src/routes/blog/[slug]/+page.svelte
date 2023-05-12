@@ -19,10 +19,10 @@
 <SvelteSeo
 	title="{data.post.data[0].title} | Pistasjis"
 	description={data.post.data[0].description}
-	canonical="https://odyssey346.dev/blog/{data.post.data[0].slug}"
+	canonical="https://pistasjis.net/blog/{data.post.data[0].slug}"
 	openGraph={{
 		type: 'article',
-		url: `https://odyssey346.dev/blog/${data.post.data[0].slug}`,
+		url: `https://pistasjis.net/blog/${data.post.data[0].slug}`,
 		title: `${data.post.data[0].title} | Pistasjis`,
 		description: `${data.post.data[0].description}`,
 		images: [
