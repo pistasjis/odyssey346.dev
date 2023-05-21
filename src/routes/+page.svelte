@@ -29,8 +29,10 @@
     <section class="second-background">
         <Hero />
     </section>
-    <div class="content special">
+    <div class="content max-w-xl w-full">
+        {#if data.kuma.incident}
         <Announcement data={data.kuma} />
+        {/if}
         <Bio />
     </div>
 </div>

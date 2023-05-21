@@ -31,11 +31,11 @@
         <p class="text-xl">Projects I've worked on. You can see what skills I've learned from these in my bio.</p>
     </div>
     </section>
-    <div class="content">
+    <div class="content mt-2">
         <div class="flex gap-8 mb-5 flex-wrap w-full max-w-xl">
         {#each data.projects.data as project}
             {#if project.status == "published"}
-            <a href="/projects/{project.name}" class="flex flex-col bg-fourthbackground mt-5 gap-4 border-b-2 border-solid p-5 hover:border-accent transition-all">
+            <a href="/projects/{project.name}" class="rounded-md flex flex-col bg-fourthbackground mt-5 gap-4 border-b-2 border-solid p-5 hover:border-accent transition-all">
                 <h1 class="text-4xl font-bold">{project.name}</h1>
                 <img src="{data.directus_api_url}/assets/{project.Cover}/image.png?quality=50&width=1024&height=328" alt={project.title} class="w-fit rounded-md" />
                 <p class="text-xl">{project.description}</p>

@@ -13,6 +13,10 @@ body {
     @apply bg-background text-text font-sans transition-all;
 }
 
+h1, h2 {
+    @apply font-header;
+}
+
 .second-background {
     @apply bg-secondbackground w-full pb-5 text-white;
 }

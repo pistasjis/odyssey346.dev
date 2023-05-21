@@ -18,7 +18,8 @@ export default defineConfig({
           provider: 'bunny', // default provider
           fonts: {
             // these will extend the default theme
-            sans: ["Space Grotesk", "Outfit", "sans-serif"],
+            header: ["Poppins", "Lexend", "sans-serif"],
+            sans: ["Poppins", "sans-serif"],
             mono: ["JetBrains Mono", "monospace"],
           },
         }),

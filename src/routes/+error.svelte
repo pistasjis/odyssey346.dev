@@ -2,6 +2,7 @@
     import Hero from "$lib/components/Hero.svelte";
     import { page } from "$app/stores";
     import ReadMoreButton from "$lib/components/ReadMoreButton.svelte";
+    import Link from "$lib/components/Link.svelte";
 </script>
 
 
@@ -21,7 +22,7 @@
         </div>
         <p>{$page.error?.message}</p>
         {#if $page.status === 404}
-            <ReadMoreButton href="/" text="Want to go back home?" />
+            <Link href="/" text="Go back home?" />
         {/if}
     </div>
 </div>

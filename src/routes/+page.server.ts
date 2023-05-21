@@ -4,6 +4,6 @@ import { get } from "svelte/store";
 
 export const load = (async () => {
     return {
-        kuma: get(kuma)
+        kuma: get(kuma),
     };
 }) satisfies PageServerLoad
