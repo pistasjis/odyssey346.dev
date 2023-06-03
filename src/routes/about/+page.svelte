@@ -3,8 +3,6 @@
     import Hero from "$lib/components/Hero.svelte";
     import Bio from "$lib/components/Bio.svelte";
 
-    import type { PageData } from "./$types";
-
     import SvelteSeo from "svelte-seo";
 </script>
 

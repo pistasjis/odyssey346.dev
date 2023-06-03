@@ -67,7 +67,7 @@
         </form> -->
         <div class="max-w-xl w-full">
             <h2 class="text-3xl font-bold mt-5">E-mail</h2>
-            <p>You can send me an e-mail at <Link text="hi[at symbol]pistasjis.net" href="mailto:hi@pistasjis.net" />. <span class="font-bold">NB!</span> This e-mail address forwards to another email hosted elsewhere, so you'll get a response from a different e-mail address. Because of this I can't provide a PGP key on this site.</p>
+            <p class="my-2">You can send me an e-mail at <Link text="hi[at symbol]pistasjis.net" href="mailto:hi@pistasjis.net" />. <span class="font-bold">NB!</span> This e-mail address forwards to another email hosted elsewhere, so you'll get a response from a different e-mail address. Because of this I can't provide a PGP key on this site.</p>
         </div>
     </div>
 </div>

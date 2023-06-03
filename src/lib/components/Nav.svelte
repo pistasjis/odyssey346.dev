@@ -3,12 +3,26 @@
     import ReadMoreButton from "./ReadMoreButton.svelte";
     import { page } from "$app/stores";
     import "$lib/styles/navbar.css";
+	import { slide } from "svelte/transition";
 
     let YValue = 0;
+    let lastYValue = 0;
     let innerWidth = 0;
+
+    let nav: HTMLElement;
+
+    const handleScroll = () => {
+        if (YValue > lastYValue) {
+            nav.style.top = "-80px";
+        } else {
+            nav.style.top = "0px";
+        }
+
+        lastYValue = YValue;
+    };
 </script>
 
-<nav class="flex justify-between border-solid p-2 border-gray-600 bg-secondbackground navbar z-50">
+<nav class="flex justify-between p-2 bg-secondbackground navbar z-50 items-center" bind:this={nav}>
     <div class="flex flex-row items-center justify-center">
         <a href="/" class="odyssey">
             <h1 class="text-2xl">Pistasj</h1>
@@ -19,11 +33,19 @@
         <a href="/projects" class="underline-offset-5 hover:opacity-75 transition-all text-xl" class:underline={$page.url.pathname === "/projects"}>Projects</a>
         <a href="/blog" class="underline-offset-5 hover:opacity-75 transition-all text-xl" class:underline={$page.url.pathname === "/blog"}>Blog</a>
         <a href="/contact" class="underline-offset-5 hover:opacity-75 transition-all text-xl" class:underline={$page.url.pathname === "/contact"}>Contact</a>
-        <!--
-        <a href="/about" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-accent" class:border-accent={$page.url.pathname === "/about"}>About</a>
-        <a href="/projects" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-accent" class:border-accent={$page.url.pathname === "/projects"}>Projects</a>
-        <a href="/blog" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-accent" class:border-accent={$page.url.pathname === "/blog"}>Blog</a>
-        <a href="/contact" class="navbutton border-solid rounded-full border-2 transition-all max-w-fit p-2 hover:border-accent" class:border-accent={$page.url.pathname === "/contact"}>Contact</a>
-        -->
     </div>
 </nav>
+
+<svelte:window bind:scrollY={YValue} bind:innerWidth={innerWidth} on:scroll={handleScroll} />
+
+{#if YValue >= 500 && innerWidth >= 768}
+<style>
+    .navbar {
+        transition: top 0.2s ease-in-out;
+        background: var(--fourth-background);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        position: sticky;
+    }
+</style>
+{/if}

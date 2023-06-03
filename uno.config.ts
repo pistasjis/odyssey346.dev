@@ -15,11 +15,10 @@ export default defineConfig({
           dark: "media"
         }),
         presetWebFonts({
-          provider: 'bunny', // default provider
+          provider: 'google', // default provider
           fonts: {
             // these will extend the default theme
-            header: ["Poppins", "Lexend", "sans-serif"],
-            sans: ["Poppins", "sans-serif"],
+            sans: ["Nunito Sans"],
             mono: ["JetBrains Mono", "monospace"],
           },
         }),
