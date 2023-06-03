@@ -40,12 +40,14 @@
 				<h1 class="text-4xl font-bold pb-1">{data.post.data[0].title}</h1>
 				<p class="text-xl">{data.post.data[0].description}</p>
 				{#if data.post.data[0].cover}
-				<img
-					src="{data.directus_api_url}/assets/{data.post.data[0]
-						.cover}/image.png?quality=50&width=1024&height=328"
-					alt={data.post.data[0].title}
-					class="pt-2 w-fit rounded-md"
-				/>
+				<div id="image-container" class="pt-2.5">
+					<img
+						src="{data.directus_api_url}/assets/{data.post.data[0]
+							.cover}/image.png?quality=50&width=1024&height=328"
+						alt={data.post.data[0].title}
+						class="w-fit rounded-md"
+					/>
+				</div>
 				{/if}
 				{#if data.post.data[0].publish_status == 'draft'}
 					<Draft />
