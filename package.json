@@ -1,6 +1,6 @@
 {
-	"name": "odyssey3",
-	"version": "0.0.1",
+	"name": "pistasjis.net",
+	"version": "2.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
