@@ -1,22 +1,22 @@
 name: Lint using Prettier
 
 on:
-  push:
-    branches:
-      - 'ice'
+    push:
+        branches:
+            - "ice"
 
 jobs:
-  lint:
-    name: 'Lint'
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Lint:checkout"
-        uses: actions/checkout@v3
-      - name: "Lint:install-pnpm"
-        uses: pnpm/action-setup@v2
-        with:
-          version: 'latest'
-      - name: "Lint:install-dependencies"
-        run: pnpm install
-      - name: "Lint:run"
-        run: pnpm lint
+    lint:
+        name: "Lint"
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Lint:checkout"
+              uses: actions/checkout@v3
+            - name: "Lint:install-pnpm"
+              uses: pnpm/action-setup@v2
+              with:
+                  version: "latest"
+            - name: "Lint:install-dependencies"
+              run: pnpm install
+            - name: "Lint:run"
+              run: pnpm lint

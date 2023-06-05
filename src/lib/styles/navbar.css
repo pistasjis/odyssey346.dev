@@ -1,17 +1,17 @@
 @media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        position: static;
-        top: 0;
-    }
-    .navlinks a {
-        @apply w-2/3 max-w-screen text-center;
-    }
-    .odyssey {
-        padding-bottom: 0.5rem;
-    }
+	nav {
+		flex-direction: column;
+		position: static;
+		top: 0;
+	}
+	.navlinks a {
+		@apply w-2/3 max-w-screen text-center;
+	}
+	.odyssey {
+		padding-bottom: 0.5rem;
+	}
 
-    .odyssey > h1 > span {
-        text-align: center;
-    }
+	.odyssey > h1 > span {
+		text-align: center;
+	}
 }

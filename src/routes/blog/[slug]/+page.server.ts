@@ -4,16 +4,16 @@ import { error } from "@sveltejs/kit";
 import { env } from "$env/dynamic/private";
 
 export const load = (async ({ params }) => {
-    const post = await getPost(params.slug);
+	const post = await getPost(params.slug);
 
-    if (post.error) {
-        throw error(404, "Post not found");
-    } else if (post.data.length === 0) {
-        throw error(404, "Post not found");
-    }
+	if (post.error) {
+		throw error(404, "Post not found");
+	} else if (post.data.length === 0) {
+		throw error(404, "Post not found");
+	}
 
-    return {
-        post: post,
-        directus_api_url: env.directus_api_url,
-    };
-}) satisfies PageServerLoad
+	return {
+		post: post,
+		directus_api_url: env.directus_api_url
+	};
+}) satisfies PageServerLoad;

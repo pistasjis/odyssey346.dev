@@ -1,8 +1,8 @@
 @media screen and (max-width: 768px) {
-    .post {
-        @apply break-words;
-    }
-    .endbuttons {
-        @apply flex-col items-center gap-4;
-    }
+	.post {
+		@apply break-words;
+	}
+	.endbuttons {
+		@apply flex-col items-center gap-4;
+	}
 }
