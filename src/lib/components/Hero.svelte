@@ -6,7 +6,7 @@
 	class="flex flex-col items-left justify-left gap-4 mt-5 mb-5 w-full max-w-xl"
 >
 	<h1 class="text-3xl font-bold">
-		Hello, I'm <span class="underline underline-offset-5">Pistasj</span>!
+		Hello, I'm <span class="underline underline-offset-9">Pistasj</span>!
 	</h1>
 	<p>I like messing around with computers.</p>
 	<div class="flex flex-row gap-4 text-3xl flex-wrap">

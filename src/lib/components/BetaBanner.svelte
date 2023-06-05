@@ -1,7 +1,7 @@
 <!-- create me a banner that tells the user that this site is in beta -->
 <!-- Path: src\lib\components\BetaBanner.svelte -->
 <div
-	class="bg-fourthbackground border-b-2 border-yellow-500 text-white p-2"
+	class="bg-thirdbackground border-yellow-500 text-white p-2"
 	role="alert"
 >
 	<p>

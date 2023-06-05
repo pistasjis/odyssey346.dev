@@ -7,7 +7,6 @@
 	import Elevator from "$lib/components/Elevator.svelte";
 	import Noscript from "$lib/components/Noscript.svelte";
 	import LoadProgress from "$lib/components/LoadProgress.svelte";
-	import BetaBanner from "$lib/components/BetaBanner.svelte";
 	import type { LayoutData } from "./$types";
 	import { navigating } from "$app/stores";
 	export let data: LayoutData;
@@ -17,8 +16,6 @@
 <!-- <noscript>
     <Noscript />
 </noscript> -->
-
-<BetaBanner />
 
 <Nav />
 

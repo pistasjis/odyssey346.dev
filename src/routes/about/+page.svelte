@@ -60,7 +60,7 @@
 				<img
 					src="/ha4t207b.bmp"
 					alt="Monero donation QR code"
-					class="w-1/2 rounded-xl"
+					class="mt-3 w-1/2 rounded-xl"
 				/>
 			</details>
 			<h3
@@ -83,7 +83,7 @@
 				<img
 					src="/bitcoin.png"
 					alt="Bitcoin donation QR code"
-					class="w-1/2 rounded-xl"
+					class="mt-3 w-1/2 rounded-xl"
 				/>
 			</details>
 			<p class="text-xl">Thank you for your support!</p>
