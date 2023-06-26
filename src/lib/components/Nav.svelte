@@ -37,7 +37,7 @@
 	<div class="navlinks flex gap-2">
 		<a
 			href="/about"
-			class="underline-offset-5 hover:opacity-75 transition-all text-xl "
+			class="underline-offset-5 hover:opacity-75 transition-all text-xl"
 			class:underline={$page.url.pathname === "/about"}>About</a
 		>
 		<a

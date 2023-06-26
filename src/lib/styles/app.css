@@ -13,9 +13,12 @@ body {
 	@apply bg-background text-text font-sans transition-all;
 }
 
-h1,
+h1 {
+	@apply text-2xl font-bold;
+}
+
 h2 {
-	@apply font-header;
+	@apply text-xl font-bold;
 }
 
 .second-background {
@@ -67,7 +70,7 @@ h2 {
 		--third-background: #333363;
 		--fourth-background: #e1e1e1;
 		--text: #151515;
-		--accent: aquamarine;
+		--accent: #3eb489;
 		--font-mono: "JetBrains Mono", monospace;
 		color-scheme: light;
 	}

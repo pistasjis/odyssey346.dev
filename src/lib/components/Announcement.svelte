@@ -1,8 +1,6 @@
 <script lang="ts">
 	import dayjs from "dayjs";
 
-	import SvelteMarkdown from "svelte-markdown";
-
 	export let data: any;
 </script>
 
@@ -28,7 +26,8 @@
 					<h2 class="text-2xl">{data.incident.title}</h2>
 				</div>
 				<p class="break-all max-w-max announcement-content">
-					<SvelteMarkdown source={data.incident.content} />
+					<!-- Using @html is unsafe, but we have already sanitized the content beforehand so it's OK. -->
+					{@html data.incident.content}
 				</p>
 				<p>
 					Created at {dayjs(data.incident.createdDate).format(
@@ -77,7 +76,7 @@
 	{#if data.incident.style === "primary"}
 		<style>
 			.announcement {
-				border-bottom: 3px solid #198754;
+				border-bottom: 3px solid #199964;
 			}
 		</style>
 	{/if}

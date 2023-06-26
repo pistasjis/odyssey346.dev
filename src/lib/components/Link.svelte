@@ -5,6 +5,6 @@
 
 <a
 	{href}
-	class="underline underline-offset-5 text-gray-100 hover:text-accent transition-all"
+	class="underline underline-offset-5 hover:text-accent transition-all"
 	>{text}</a
 >
