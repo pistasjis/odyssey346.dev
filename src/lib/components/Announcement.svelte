@@ -25,10 +25,13 @@
 					{/if}
 					<h2 class="text-2xl">{data.incident.title}</h2>
 				</div>
-				<p class="break-all max-w-max announcement-content">
-					<!-- Using @html is unsafe, but we have already sanitized the content beforehand so it's OK. -->
-					{@html data.incident.content}
-				</p>
+				<!-- For some reason the html escapes announcement-content when you're not using JavaScript and creates a really weird animation where you can see the padding be reduced on initial load. This fixes it, I think. -->
+				<div class="incident-container">
+					<p class="break-all max-w-max announcement-content">
+						<!-- Using @html is unsafe, but we have already sanitized the content beforehand so it's OK. -->
+						{@html data.incident.content}
+					</p>
+				</div>
 				<p>
 					Created at {dayjs(data.incident.createdDate).format(
 						"ddd, DD MMM YYYY HH:mm"

@@ -9,7 +9,6 @@
 	import LoadProgress from "$lib/components/LoadProgress.svelte";
 	import type { LayoutData } from "./$types";
 	import { navigating } from "$app/stores";
-	export let data: LayoutData;
 	let YValue = 0;
 </script>
 
