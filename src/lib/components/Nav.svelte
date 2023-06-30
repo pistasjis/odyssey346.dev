@@ -29,7 +29,7 @@
 	<div class="flex flex-row items-center justify-center">
 		<a
 			href="/"
-			class="odyssey"
+			class="brand"
 		>
 			<h1 class="text-2xl">Pistasj</h1>
 		</a>
