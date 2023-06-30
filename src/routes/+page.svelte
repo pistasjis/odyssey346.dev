@@ -30,7 +30,7 @@
 		<Hero />
 	</section>
 	<div class="content max-w-xl w-full">
-		{#if data.kuma.incident}
+		{#if data.kuma}
 			<Announcement data={data.kuma} />
 		{/if}
 		<Bio />

@@ -1,5 +1,4 @@
 import { kuma } from "$lib/server/cache";
-import axios from "axios";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -8,26 +7,25 @@ import rehypeStringify from "rehype-stringify";
 
 const updateCache = async () => {
 	try {
-		const kumaResponse = await axios(
+		const kumaResponse = await fetch(
 			"https://status.pistasjis.net/api/status-page/main"
-		);
+		).then((res) => res.json()).catch((err) => {
+			console.log("h");
+			kuma.set({ error: true, message: "Error: " + err });
+		});
 
-		if (kumaResponse.status === 200) {
-			const markdown = await unified()
-				.use(remarkParse)
-				.use(remarkRehype)
-				.use(rehypeSanitize)
-				.use(rehypeStringify)
-				.process(kumaResponse.data.incident.content);
+		const markdown = await unified()
+			.use(remarkParse)
+			.use(remarkRehype)
+			.use(rehypeSanitize)
+			.use(rehypeStringify)
+			.process(kumaResponse.incident.content);
 
-			kumaResponse.data.incident.content = markdown.toString();
+		kumaResponse.incident.content = markdown.toString();
 
-			kuma.set(kumaResponse.data);
-		} else {
-			kuma.set({ error: true, message: "Error: " + kumaResponse.status });
-		}
+		kuma.set(kumaResponse);
 	} catch (err) {
-		console.log(err);
+		console.log("h2");
 		kuma.set({ error: true, message: "Error: " + err });
 	}
 };
