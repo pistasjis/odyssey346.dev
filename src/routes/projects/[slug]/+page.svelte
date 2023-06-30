@@ -35,7 +35,7 @@
 		<Draft />
 	{/if}
 	<section class="second-background">
-		<div class="flex flex-col gap-2 max-w-xl w-full">
+		<div class="flex flex-col gap-2 max-w-xl w-full justify-center">
 			<h1 class="text-4xl font-bold">{data.project.data[0].name}</h1>
 			<p class="text-xl">{data.project.data[0].description}</p>
 			{#if data.project.data[0].stack}

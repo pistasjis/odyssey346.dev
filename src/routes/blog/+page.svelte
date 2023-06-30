@@ -4,6 +4,7 @@
 	export let data: PageData;
 
 	import SvelteSeo from "svelte-seo";
+	import ContentCard from "$lib/components/Content/ContentCard.svelte";
 </script>
 
 <svelte:head>
@@ -35,29 +36,22 @@
 		</section>
 		<div class="content mt-2">
 			<div
-				class="flex flex-row flex-wrap gap-8 items-left mb-5 max-w-xl w-full"
+				class="flex flex-wrap gap-8 items-left mb-5 w-full justify-center"
 			>
 				{#each data.posts.data as post}
 					{#if post.publish_status == "published"}
-						<a
-							href="/blog/{post.slug}"
-							class="rounded-md flex flex-col bg-fourthbackground items-left mt-5 gap-4 border-b-2 border-solid p-5 hover:border-accent transition-all hover:border-accent"
-						>
-							<h1 class="text-4xl font-bold">{post.title}</h1>
-							{#if post.cover}
-								<img
-									src="{data.directus_api_url}/assets/{post.cover}/image.png?quality=50&width=1024&height=328"
-									alt={post.title}
-									class="w-fit rounded-md"
-								/>
-							{/if}
-							<p class="text-xl">{post.description}</p>
-							<p>
-								{dayjs(post.date_created).format(
-									"ddd, DD MMM YYYY HH:mm"
-								)}
-							</p>
-						</a>
+						<ContentCard
+							contentTitle={post.title}
+							contentName={post.title}
+							contentSlug={post.slug}
+							apiUrl={data.directus_api_url}
+							contentDescription={post.description}
+							contentCover={post.cover}
+							contentType="blog"
+							contentDate={dayjs(post.date).format(
+								"MMMM D, YYYY"
+							)}
+						/>
 					{/if}
 				{/each}
 			</div>

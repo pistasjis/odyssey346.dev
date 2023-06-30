@@ -21,7 +21,7 @@
 
 <a
 	href={url}
-	class="rounded-md flex flex-col bg-fourthbackground mt-5 gap-4 border-b-3 border-solid p-5 hover:border-accent transition-all"
+	class="max-w-xl rounded-md flex flex-col bg-fourthbackground mt-5 gap-4 border-b-3 border-solid p-5 hover:border-accent transition-all"
 >
 	<h1 class="text-4xl font-bold">{contentName}</h1>
 	{#if contentCover}

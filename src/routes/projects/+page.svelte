@@ -35,7 +35,7 @@
 			</div>
 		</section>
 		<div class="content mt-2">
-			<div class="flex gap-8 mb-5 flex-wrap w-full max-w-xl">
+			<div class="flex gap-8 mb-5 flex-wrap w-full justify-center">
 				{#each data.projects.data as project}
 					{#if project.status == "published"}
 						<ContentCard
