@@ -9,10 +9,12 @@ const updateCache = async () => {
 	try {
 		const kumaResponse = await fetch(
 			"https://status.pistasjis.net/api/status-page/main"
-		).then((res) => res.json()).catch((err) => {
-			console.log("h");
-			kuma.set({ error: true, message: "Error: " + err });
-		});
+		)
+			.then((res) => res.json())
+			.catch((err) => {
+				console.log("h");
+				kuma.set({ error: true, message: "Error: " + err });
+			});
 
 		const markdown = await unified()
 			.use(remarkParse)
