@@ -14,8 +14,7 @@
 		<p>
 			pistasjis.net does not collect any personal data. However, there are
 			cases where a service hosted on pistasjis.net might log IP address
-			(Internet Protocol address) or User-Agent. I try my best to turn off
-			logging here.
+			(Internet Protocol address) or User-Agent. My web server (Caddy) is not set to log requests by default.
 		</p>
 		<p>
 			However, I do log IPs and User-Agents when visiting a service that
