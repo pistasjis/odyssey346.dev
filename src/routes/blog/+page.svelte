@@ -48,9 +48,7 @@
 							contentDescription={post.description}
 							contentCover={post.cover}
 							contentType="blog"
-							contentDate={dayjs(post.date).format(
-								"MMMM D, YYYY"
-							)}
+							contentDate={post.date}
 						/>
 					{/if}
 				{/each}

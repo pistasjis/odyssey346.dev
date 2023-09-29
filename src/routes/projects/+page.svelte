@@ -45,9 +45,7 @@
 							contentDescription={project.description}
 							contentCover={project.Cover}
 							contentType="project"
-							contentDate={dayjs(project.date).format(
-								"MMMM D, YYYY"
-							)}
+							contentDate={project.date}
 						/>
 					{/if}
 				{/each}
